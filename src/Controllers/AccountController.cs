@@ -53,7 +53,8 @@ namespace NerdDinner.Controllers
         public ActionResult LogOff()
         {
             WebSecurity.Logout();
-
+            
+            FileIO objectFile= new FileIO();
             return RedirectToAction("Index", "Home");
         }
 
